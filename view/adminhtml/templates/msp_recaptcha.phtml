@@ -24,8 +24,8 @@
 <div class="admin__field field-recaptcha">
     <div class="g-recaptcha"
          data-sitekey="<?= $block->escapeHtml($block->getPublicKey()) ?>"
-         data-size="<?= $block->escapeJs($block->getSize()) ?>"
-         data-theme="<?= $block->escapeJs($block->getTheme()) ?>"
+         data-size="<?= $this->helper(\Magento\Framework\EscapeHelper::class)->escapeJs($block->getSize()) ?>"
+         data-theme="<?= $this->helper(\Magento\Framework\EscapeHelper::class)->escapeJs($block->getTheme()) ?>"
     ></div>
 </div>
 <?php endif; ?>
